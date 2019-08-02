@@ -15,7 +15,7 @@ A very simple project to demonstrate the usage of the GPIO library and dealing w
 
 Left and Right clicks are implemented by the usage of push button switches. The mouse pointer movement is simulated by two potentiometers, one each for an axis. When a particular potentiometer is turned all the way down it maps to zero value for that axis and when turned all the way up it is max value for that axis. A similar concept is actually used for [analog joysticks](https://electronics.howstuffworks.com/joystick3.htm).
 
-The major shortcoming is that the potentiometers are not accurate and often fluctuate considerably, which leads to the mouse pointer jumping around in a tiny window of 20 pixels around the actual position of mouse.
+The major shortcoming is that the potentiometers are not accurate and often fluctuate considerably, which leads to the mouse pointer wildly jumping around the screen.
 
 A lot of correctional measures were tried out. The best one turned out to be updating the coordinates only if the new position was within 10 - 20 pixels of the previous coordinates. Since this updates on the order of microseconds it is expected that a human would move the pointer only a few pixels in that short period of time. Anything else is treated as a fluctuation.
 
